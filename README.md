@@ -19,8 +19,9 @@ Here’s the app visualized as a widget tree.
 
 ![Image of Yaktocat](https://flutter.dev/assets/development/data-and-backend/state-mgmt/simple-widget-tree-8fe7a45d88d5007510b3f2f27caa845a0453663d4e5c60b5c8d0dc036ad8a966.png)
 
-## Lifting state up
+With provider, you don’t need to worry about callbacks or InheritedWidgets. But you do need to understand 3 concepts:
 
-In Flutter, it makes sense to keep the state above the widgets that use it.
+1. ChangeNotifier
+2. ChangeNotifierProvider
+3. Consumer
 
-Why? In declarative frameworks like Flutter, if you want to change the UI, you have to rebuild it. There is no easy way to have MyCart.updateWith(somethingNew). In other words, it’s hard to imperatively change a widget from outside, by calling a method on it. And even if you could make this work, you would be fighting the framework instead of letting it help you.
