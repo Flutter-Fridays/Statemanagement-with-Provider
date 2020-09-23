@@ -25,3 +25,8 @@ With provider, you don’t need to worry about callbacks or InheritedWidgets. Bu
 2. ChangeNotifierProvider
 3. Consumer
 
+## ChangeNotifier
+
+ChangeNotifier is a simple class included in the Flutter SDK which provides change notification to its listeners. In other words, if something is a ChangeNotifier, you can subscribe to its changes. 
+
+The only code that is specific to ChangeNotifier is the call to notifyListeners(). Call this method any time the model changes in a way that might change your app’s UI.
