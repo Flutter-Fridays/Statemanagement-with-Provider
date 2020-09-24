@@ -40,6 +40,13 @@ You don’t want to place ChangeNotifierProvider higher than necessary (because 
 
 ## Consumer
 
+Consumer is a widget that calls Provider.of in a new widget, and delegates its build implementation to builder. 
+
+The Consumer widget has two main purposes:
+
+ 1. It allows obtaining a value from a provider when we don't have a BuildContext that is a descendant of said provider, and therefore cannot use Provider.of.
+ 2. It helps with performance optimisation by providing more granular rebuilds.
+ 
 The only required argument of the Consumer widget is the builder. Builder is a function that is called whenever the ChangeNotifier changes. (In other words, when you call notifyListeners() in your model, all the builder methods of all the corresponding Consumer widgets are called.
 
 The builder is called with three arguments. The first one is context, which you also get in every build method.
